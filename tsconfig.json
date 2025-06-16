@@ -1,0 +1,28 @@
+// {
+//   "compilerOptions": {
+//     // "target": "es6",
+//     // "module": "esnext",
+//     // "jsx": "react-jsx",
+//     // "strict": true,
+//     "moduleResolution": "node",
+//     "esModuleInterop": true,
+//     // "skipLibCheck": true,
+//     "types": ["jest", "node"],
+//      "baseUrl": "src",
+//     "paths": {
+//       "@components/*": ["components/*"]
+//     }
+//   },
+//   // "include": ["src"]
+// }
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "baseUrl": "src",
+    "paths": {
+      "@components/*": ["components/*"]
+    },
+    "moduleResolution": "node",
+    "esModuleInterop": true
+  }
+}
