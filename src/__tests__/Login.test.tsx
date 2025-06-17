@@ -34,6 +34,9 @@ describe('Login Component', () => {
 
     const inputPlaceholderPassword=screen.getByPlaceholderText("password")
     expect(inputPlaceholderPassword).toBeInTheDocument()
+ 
+     const inputLabelText=screen.getByText("USERNAME")
+     expect(inputLabelText).toBeInTheDocument()
   });
   
 });
