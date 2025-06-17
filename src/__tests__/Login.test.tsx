@@ -29,8 +29,11 @@ describe('Login Component', () => {
         </BrowserRouter>
       </Provider>
     );
-    const inputPlaceholder = screen.getByPlaceholderText("username");
-    expect(inputPlaceholder).toBeInTheDocument();
+    const inputPlaceholderUserName = screen.getByPlaceholderText("username");
+    expect(inputPlaceholderUserName).toBeInTheDocument();
+
+    const inputPlaceholderPassword=screen.getByPlaceholderText("password")
+    expect(inputPlaceholderPassword).toBeInTheDocument()
   });
   
 });
