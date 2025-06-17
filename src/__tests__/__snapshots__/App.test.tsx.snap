@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Component should match snapshot 1`] = `
+<div>
+  <div
+    class="bg-zinc-100 sm:h-screen block w-full md:flex"
+  >
+    <div
+      class="w-4/4 md:w-2/4 bg-zinc-100 flex flex-row justify-center "
+    >
+      <img
+        alt="image"
+        class="md:h-screen md:w-full rounded-full w-[500px] h-[500px] md:rounded-none mt-20 md:mt-0"
+        src="./assets/Rectangle 1467 (5).png"
+      />
+    </div>
+    <form
+      class="md:w-2/4 bg-zinc-100 flex flex-col  md:mt-0 p-10 sm:p-0 md:p-0 justify-center items-center"
+    >
+      <div
+        class="w-[200px] md:w-3/4 flex flex-row justify-center pt-10"
+      >
+        <img
+          alt="img"
+          src="./assets/Group 7731 (5).png"
+        />
+      </div>
+      <div
+        class="flex flex-col justify-start  w-[100%]  px-20"
+      >
+        <label
+          class="block w-full py-2"
+          for="username"
+        >
+          USERNAME
+        </label>
+        <input
+          class="text-lg block w-full border px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 h-16 md:h-[45px]"
+          id="username"
+          name="username"
+          placeholder="username"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        class="flex flex-col justify-start w-[100%] w-3/4 px-20"
+      >
+        <label
+          class="block w-full py-2"
+          for="username"
+        >
+          PASSWORD
+        </label>
+        <input
+          class="text-lg block w-full border px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 h-16 md:h-[45px]"
+          id="password"
+          name="password"
+          placeholder="password"
+          type="text"
+          value=""
+        />
+        <button
+          class="block mt-5 text-white text-xl rounded-md p-2 h-16 md:h-[45px] bg-blue-500"
+          type="submit"
+        >
+          Login
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;

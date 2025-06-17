@@ -12,3 +12,4 @@ export const store = configureStore({
     getDefaultMiddleware({ thunk: false }).concat(sagaMiddleware),
 });
 sagaMiddleware.run(rootSaga);
+

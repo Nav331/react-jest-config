@@ -59,7 +59,7 @@ export const Login = () => {
       setError({ [LoginFields.USERNAME]:"", [LoginFields.PASSWORD] :LoginErrors.EMPTY_PASSWORD});
     }
     const userFind = users.find(
-      (user: any) => username === username && password === password
+      (u: any) => u.username === username && u.password === password
     );
     if (!userFind) {
       dispatch(fetchUsersFailure(LoginErrors.INVALID_CREDENTIALS));

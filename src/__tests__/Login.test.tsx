@@ -1,15 +1,36 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom'; // ✅ correct
-import {Login} from '../components/Login/Login';
-console.log("bro",BrowserRouter)
-describe('App Component', () => {
-  it('should match snapshot', () => {
+import { render, screen } from '@testing-library/react';
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { configureStore } from '@reduxjs/toolkit';
+import userReducer from '../components/createSlice/LoginSlice';
+import { Login } from '../components/Login/Login';
+
+describe('Login Component', () => {
+  it('renders correctly', () => {
+    const store = configureStore({ reducer: { user: userReducer } });
+
     const { container } = render(
-      <BrowserRouter>
-        <Login />
-      </BrowserRouter>
+      <Provider store={store}>
+        <BrowserRouter>
+          <Login />
+        </BrowserRouter>
+      </Provider>
     );
+
     expect(container).toMatchSnapshot();
   });
+  it("renders the username input field", () => {
+    const store = configureStore({ reducer: { user: userReducer } });
+    render(
+      <Provider store={store}>
+        <BrowserRouter>
+          <Login />
+        </BrowserRouter>
+      </Provider>
+    );
+    const inputPlaceholder = screen.getByPlaceholderText("username");
+    expect(inputPlaceholder).toBeInTheDocument();
+  });
+  
 });
